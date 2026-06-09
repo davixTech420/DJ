@@ -301,38 +301,20 @@ export function HeroSection() {
 
             {/* Main Title with effects */}
             <motion.h1
-              className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-4"
+              className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-4 justify-center item-center"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}
             >
-              <motion.span className="block relative">
-                <motion.span
-                  className="bg-gradient-to-r from-primary via-chart-4 to-secondary bg-clip-text text-transparent bg-[length:200%_auto]"
-                  animate={{ backgroundPosition: ["0% center", "200% center"] }}
-                  transition={{
-                    duration: 10,
-                    repeat: Infinity,
-                    ease: "linear",
-                  }}
-                >
-                  Mala Sangre
-                </motion.span>
-                {/* Glitch effect */}
-                <motion.span
-                  className="absolute inset-0 bg-gradient-to-r from-secondary via-primary to-chart-4 bg-clip-text text-transparent bg-[length:200%_auto] opacity-0"
-                  animate={{
-                    opacity: [0, 0.8, 0],
-                    x: [0, -5, 5, 0],
-                  }}
-                  transition={{
-                    duration: 10,
-                    repeat: Infinity,
-                    repeatDelay: 50,
-                  }}
-                >
-                  Mala Sangre
-                </motion.span>
+              <motion.span className="flex shrink-0 justify-center lg:justify-start  ml-20  mr-20">
+                <Image
+                    src="/images/nameSangre.png"
+                    alt="Mala Sangre"
+                    width={400}
+                    height={120}
+                    className="h-6 sm:h-7 md:h-8 lg:h-9 w-auto max-w-[100px] sm:max-w-[120px] md:max-w-[140px] object-contain scale-1000"
+                    priority
+                  />
               </motion.span>
             </motion.h1>
 
