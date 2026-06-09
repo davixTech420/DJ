@@ -46,7 +46,7 @@ function EqualizerBars() {
 function VinylRecord() {
   return (
     <motion.div
-      className="absolute -right-20 top-1/4 w-64 h-64 opacity-20"
+      className="absolute -right-20 top-1/4 w-64 h-64 opacity-"
       animate={{ rotate: 180 }}
       transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
     >
@@ -134,7 +134,7 @@ export function HeroSection() {
       className="relative min-h-screen flex items-center overflow-hidden"
     >
       {/* Animated Grid Lines */}
-      {
+      {/* {
         <div className="absolute inset-0 overflow-hidden opacity-20">
           <motion.div
             className="absolute inset-0"
@@ -151,7 +151,7 @@ export function HeroSection() {
             transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
           />
         </div>
-      }
+      } */}
 
       <VinylRecord />
 

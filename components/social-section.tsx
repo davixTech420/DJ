@@ -1,43 +1,43 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Instagram, Youtube, Music2, Twitter, Twitch, ExternalLink } from "lucide-react"
+import { Instagram, Youtube, Music2, Twitter, Twitch, ExternalLink,Facebook } from "lucide-react"
 
 const socials = [
   {
     name: "Instagram",
-    handle: "@djneonpulse",
-    followers: "45.2K",
+    handle: "@mala.sangredj",
+    followers: "1.1K",
     icon: Instagram,
     color: "from-purple-500 via-pink-500 to-orange-400",
-    link: "#",
+    link: "https://www.instagram.com/mala.sangredj?igsh=MWU3aGhzbW4xNWRldw==",
     description: "Behind the scenes & daily vibes",
   },
   {
-    name: "Spotify",
-    handle: "DJ Neon Pulse",
-    followers: "120K",
-    icon: Music2,
-    color: "from-green-500 to-green-400",
-    link: "#",
+    name: "Facebook",
+    handle: "Dj Mala Sangre Oficial",
+    followers: "5.3K",
+    icon: Facebook,
+    color: "from-blue-500 to-blue-400",
+    link: "https://www.facebook.com/share/1awRWMzdWD/",
     description: "Escucha mis últimos sets",
   },
   {
     name: "YouTube",
-    handle: "DJ Neon Pulse",
-    followers: "89K",
+    handle: "Dj Mala Sangre",
+    followers: "1.1K",
     icon: Youtube,
     color: "from-red-500 to-red-600",
-    link: "#",
+    link: "https://www.youtube.com/@Mala_sangre_oficial",
     description: "Live sets & music videos",
   },
   {
     name: "SoundCloud",
-    handle: "neonpulse",
-    followers: "67K",
+    handle: "DJ MALA SANGRE",
+    followers: "190",
     icon: Music2,
     color: "from-orange-500 to-orange-600",
-    link: "#",
+    link: "https://soundcloud.com/andres-ring-589967772",
     description: "Exclusive mixes & remixes",
   },
   {
@@ -50,9 +50,9 @@ const socials = [
     description: "Noticias & actualizaciones",
   },
   {
-    name: "Twitch",
-    handle: "djneonpulse",
-    followers: "28K",
+    name: "Tiktok",
+    handle: "@oficialmalasangre",
+    followers: "3.8K",
     icon: Twitch,
     color: "from-purple-600 to-purple-700",
     link: "#",
@@ -209,7 +209,7 @@ export function SocialSection() {
               viewport={{ once: true }}
               transition={{ type: "spring", delay: 0.3 }}
             >
-              380K+
+              11.5K+
             </motion.div>
             <span className="text-muted-foreground">Seguidores en todas las plataformas</span>
             
