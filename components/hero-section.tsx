@@ -3,12 +3,10 @@
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import {
   Play,
-  Headphones,
   Music,
   Disc3,
   Sparkles,
   Zap,
-  Radio,
 } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -101,7 +99,7 @@ export function HeroSection() {
     setMounted(true);
   }, []);
 
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
   const cursorX = useMotionValue(0);
   const cursorY = useMotionValue(0);
   const springX = useSpring(cursorX, { stiffness: 100, damping: 20 });
@@ -133,26 +131,6 @@ export function HeroSection() {
       id="home"
       className="relative min-h-screen flex items-center overflow-hidden"
     >
-      {/* Animated Grid Lines */}
-      {/* {
-        <div className="absolute inset-0 overflow-hidden opacity-20">
-          <motion.div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `
-              linear-gradient(to right, rgba(0, 240, 255, 0.1) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(0, 240, 255, 0.1) 1px, transparent 1px)
-            `,
-              backgroundSize: "60px 60px",
-            }}
-            animate={{
-              backgroundPosition: ["0px 0px", "60px 60px"],
-            }}
-            transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-          />
-        </div>
-      } */}
-
       <VinylRecord />
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 py-20">
@@ -308,13 +286,13 @@ export function HeroSection() {
             >
               <motion.span className="flex shrink-0 justify-center lg:justify-start  ml-20  mr-20">
                 <Image
-                    src="/images/nameSangre.png"
-                    alt="Mala Sangre"
-                    width={400}
-                    height={120}
-                    className="h-6 sm:h-7 md:h-8 lg:h-9 w-auto max-w-[100px] sm:max-w-[120px] md:max-w-[140px] object-contain scale-1000"
-                    priority
-                  />
+                  src="/images/nameSangre.png"
+                  alt="Mala Sangre"
+                  width={400}
+                  height={120}
+                  className="h-6 sm:h-7 md:h-8 lg:h-9 w-auto max-w-[100px] sm:max-w-[120px] md:max-w-[140px] object-contain scale-1000"
+                  priority
+                />
               </motion.span>
             </motion.h1>
 
@@ -334,16 +312,16 @@ export function HeroSection() {
               transition={{ delay: 1 }}
               className="text-lg md:text-xl text-muted-foreground max-w-lg mx-auto lg:mx-0 mb-8 leading-relaxed"
             >
-             Más que música, una experiencia. 
+              Más que música, una experiencia.
               <motion.span
                 className="text-primary font-semibold"
                 animate={{ opacity: [1, 0.5, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
                 {" "}
-                 Ritmos envolventes, emociones intensas{" "}
+                Ritmos envolventes, emociones intensas{" "}
               </motion.span>
-               una conexión auténtica con cada persona en la pista
+              una conexión auténtica con cada persona en la pista
             </motion.p>
 
             {/* Animated Stats with more effects */}

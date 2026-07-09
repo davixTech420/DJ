@@ -1,13 +1,14 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Instagram, Youtube, Music2, Twitter, Heart } from "lucide-react"
+import { Instagram, Youtube, Music2, Heart, Facebook } from "lucide-react"
+import Image from "next/image";
 
 const socialIcons = [
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Youtube, href: "#", label: "YouTube" },
-  { icon: Music2, href: "#", label: "Spotify" },
-  { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: Instagram, href: "https://www.instagram.com/mala.sangredj?igsh=MWU3aGhzbW4xNWRldw==", label: "Instagram" },
+  { icon: Youtube, href: "https://www.youtube.com/@Mala_sangre_oficial", label: "YouTube" },
+  { icon: Facebook, href: "https://www.facebook.com/share/1awRWMzdWD/", label: "Facebook" },
+  { icon: Music2, href: "https://soundcloud.com/andres-ring-589967772", label: "SoundCloud" },
 ]
 
 export function Footer() {
@@ -23,19 +24,23 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center gap-8">
           {/* Logo */}
-          <motion.a
-            href="#home"
-            className="text-3xl font-black tracking-tighter"
-            whileHover={{ scale: 1.05 }}
-          >
-            <motion.span
-              className="bg-gradient-to-r from-primary via-secondary to-chart-4 bg-clip-text text-transparent bg-[length:200%_auto]"
-              animate={{ backgroundPosition: ["0% center", "200% center"] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-            >
-              DJ NE
-            </motion.span>
-          </motion.a>
+          <motion.h1
+                        className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-4 justify-center item-center"
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.8, duration: 0.8 }}
+                      >
+                        <motion.span className="flex shrink-0 justify-center lg:justify-start  ml-20  mr-20">
+                          <Image
+                            src="/images/nameSangre.png"
+                            alt="Mala Sangre"
+                            width={400}
+                            height={120}
+                            className="h-6 sm:h-7 md:h-8 lg:h-9 w-auto max-w-[100px] sm:max-w-[120px] md:max-w-[140px] object-contain scale-1000"
+                            priority
+                          />
+                        </motion.span>
+                      </motion.h1>
 
           {/* Social Icons */}
           <div className="flex items-center gap-4">
@@ -74,7 +79,7 @@ export function Footer() {
 
           {/* Copyright */}
           <div className="flex flex-col sm:flex-row items-center gap-2 text-sm text-muted-foreground">
-            <p>2026 DJ Neon Pulse. Todos los derechos reservados.</p>
+            <p>2026 DJ Mala Sangre. Todos los derechos reservados.</p>
             <span className="hidden sm:block">|</span>
             <p className="flex items-center gap-1">
               Hecho con <Heart className="w-4 h-4 text-secondary fill-secondary" /> para la musica

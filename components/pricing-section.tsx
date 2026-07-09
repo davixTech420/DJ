@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 import { Check, Star, Sparkles, Music, Mic, Users, Clock, Zap, Crown, Disc3 } from "lucide-react"
 import { useState } from "react"
 
@@ -51,8 +51,8 @@ const packages = [
       "Producción visual completa",
       "DJ invitado apertura",
       "Contenido para redes",
-      "Streaming en vivo",
-      "Afterparty set",
+     
+      
     ],
     popular: false,
   },
@@ -85,34 +85,7 @@ function MiniEqualizer({ color }: { color: string }) {
   )
 }
 
-// Floating particles component
-function FloatingParticles({ count = 10, color = "primary" }: { count?: number; color?: string }) {
-  return (
-    <>
-      {[...Array(count)].map((_, i) => (
-        <motion.div
-          key={i}
-          className={`absolute w-1 h-1 rounded-full bg-${color}`}
-          style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-          }}
-          animate={{
-            y: [0, -30, 0],
-            x: [0, (Math.random() - 0.5) * 20, 0],
-            opacity: [0.2, 0.8, 0.2],
-            scale: [1, 1.5, 1],
-          }}
-          transition={{
-            duration: 2 + Math.random() * 2,
-            repeat: Infinity,
-            delay: i * 0.2,
-          }}
-        />
-      ))}
-    </>
-  )
-}
+
 
 export function PricingSection() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null)
@@ -259,55 +232,9 @@ export function PricingSection() {
               onHoverEnd={() => setHoveredCard(null)}
               className={`relative group ${pkg.popular ? "md:-mt-8 md:mb-8" : ""}`}
             >
-              {/* Popular Badge with animation */}
-              {pkg.popular && (
-                <motion.div
-                  className="absolute -top-5 left-1/2 -translate-x-1/2 z-20"
-                  initial={{ y: -30, opacity: 0, scale: 0 }}
-                  whileInView={{ y: 0, opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.6, type: "spring" }}
-                >
-                  <motion.span 
-                    className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-primary via-secondary to-chart-4 text-primary-foreground text-xs font-bold uppercase tracking-wider rounded-full"
-                    animate={{ 
-                      boxShadow: [
-                        "0 0 20px rgba(0, 240, 255, 0.5)",
-                        "0 0 40px rgba(255, 0, 150, 0.5)",
-                        "0 0 20px rgba(0, 240, 255, 0.5)",
-                      ],
-                    }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                  >
-                    <motion.span
-                      animate={{ rotate: 360 }}
-                      transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                    >
-                      <Crown className="w-4 h-4" />
-                    </motion.span>
-                    Más Popular
-                  </motion.span>
-                </motion.div>
-              )}
+             
 
-              {/* Rotating glow effect */}
-              <AnimatePresence>
-                {(hoveredCard === index || pkg.popular) && (
-                  <motion.div
-                    className="absolute -inset-1 rounded-3xl"
-                    style={{
-                      background: "conic-gradient(from 0deg, var(--primary), var(--secondary), var(--chart-4), var(--primary))",
-                      filter: "blur(15px)",
-                    }}
-                    initial={{ opacity: 0, rotate: 0 }}
-                    animate={{ opacity: pkg.popular ? 0.4 : 0.6, rotate: 360 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ 
-                      opacity: { duration: 0.3 },
-                      rotate: { duration: 8, repeat: Infinity, ease: "linear" },
-                    }}
-                  />
-                )}
-              </AnimatePresence>
+             
 
               {/* Card Content */}
               <div
@@ -316,7 +243,7 @@ export function PricingSection() {
                 } flex flex-col overflow-hidden`}
               >
                 {/* Floating particles inside card */}
-                <FloatingParticles count={8} color={pkg.color} />
+           {/*      <FloatingParticles count={8} color={pkg.color} /> */}
 
                 {/* Animated background pulse */}
                 <motion.div
@@ -429,7 +356,7 @@ export function PricingSection() {
               animate={{ rotate: [0, 10, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity }}
             >
-              <Users className="w-8 h-8 text-primary" />
+              <Users className="w-8 h-8 text-primary" />  
             </motion.div>
             <div className="text-left">
               <p className="font-bold text-lg text-foreground">Evento Corporativo o Especial?</p>

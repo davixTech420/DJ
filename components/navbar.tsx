@@ -1,3 +1,5 @@
+"use client"
+
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -30,35 +32,34 @@ export function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
             ? "bg-background/80 backdrop-blur-xl border-b border-border"
             : "bg-transparent"
-        }`}
+          }`}
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      
+
           <motion.a
-  href="#home"
-  className="flex items-center shrink-0 scale-400 ml-10"
-  whileHover={{ scale: 1.05 }}
-  whileTap={{ scale: 0.95 }}
->
-  <Image
-    src="/images/nameSangre.png"
-    alt="Mala Sangre"
-    width={400}
-    height={120}
-    className="h-6 sm:h-7 md:h-8 lg:h-9 w-auto max-w-[100px] sm:max-w-[120px] md:max-w-[140px] object-contain"
-    priority
-  />
-</motion.a>
+            href="#home"
+            className="flex items-center shrink-0 scale-400 ml-10"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Image
+              src="/images/nameSangre.png"
+              alt="Mala Sangre"
+              width={400}
+              height={120}
+              className="h-6 sm:h-7 md:h-8 lg:h-9 w-auto max-w-[100px] sm:max-w-[120px] md:max-w-[140px] object-contain"
+              priority
+            />
+          </motion.a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item, i) => (
               <motion.a
-                key={item.name}
+                key={item.name} 
                 href={item.href}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -72,7 +73,7 @@ export function Navbar() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-2 bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold rounded-full text-sm hover:shadow-lg hover:shadow-primary/30 transition-shadow"
+              className="px-6 py-2 bg-gradient-to-r from-primary to-secondary color-white font-semibold rounded-full text-sm hover:shadow-lg hover:shadow-primary/30 transition-shadow"
             >
               Reservar
             </motion.button>
@@ -115,7 +116,7 @@ export function Navbar() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5 }}
-                className="px-8 py-3 bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold rounded-full text-lg mt-4"
+                className="px-8 py-3 bg-gradient-to-r from-primary to-secondary color-white font-semibold rounded-full text-lg mt-4"
               >
                 Reservar
               </motion.button>

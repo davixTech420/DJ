@@ -90,9 +90,9 @@ export function ContactSection() {
             {/* Contact Cards */}
             <div className="space-y-4">
               {[
-                { icon: Mail, label: "Email", value: "booking@djneonpulse.com", description: "Respuesta en 24h" },
-                { icon: Phone, label: "Telefono", value: "+1 (555) 123-4567", description: "Lun-Vie 9AM-6PM" },
-                { icon: MapPin, label: "Ubicacion", value: "Los Angeles, CA", description: "Disponible mundialmente" },
+                { icon: Mail, label: "Email", value: "malasangre@dj.com", description: "Respuesta en 24h" },
+                { icon: Phone, label: "Telefono", value: "+57 301 5717859", description: "Lun-Dom" },
+                { icon: MapPin, label: "Ubicacion", value: "Bogota DC", description: "Disponible mundialmente" },
               ].map((contact, index) => (
                 <motion.div
                   key={contact.label}
@@ -133,7 +133,7 @@ export function ContactSection() {
                     animate={isInView ? { scale: 1 } : {}}
                     transition={{ delay: 0.5, type: "spring" }}
                   >
-                    24h
+                    5m
                   </motion.div>
                   <div className="text-xs text-muted-foreground">Tiempo de respuesta</div>
                 </div>
@@ -155,7 +155,7 @@ export function ContactSection() {
                     animate={isInView ? { scale: 1 } : {}}
                     transition={{ delay: 0.7, type: "spring" }}
                   >
-                    500+
+                    200+
                   </motion.div>
                   <div className="text-xs text-muted-foreground">Eventos</div>
                 </div>

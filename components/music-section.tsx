@@ -50,9 +50,9 @@ const tracks = [
 
 const platforms = [
   { name: "Spotify", color: "#1DB954", icon: Music2 },
-  { name: "Apple Music", color: "#FA243C", icon: Music2 },
+  { name: "Youtube", color: "#FA243C", icon: Music2 },
   { name: "SoundCloud", color: "#FF5500", icon: Radio },
-  { name: "Beatport", color: "#00FFBF", icon: Headphones },
+  { name: "Facebook", color: "#00FFBF", icon: Headphones },
 ]
 
 export function MusicSection() {
@@ -147,7 +147,7 @@ export function MusicSection() {
                   className="object-cover w-full h-full"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
-                
+
                 {/* Play Overlay */}
                 <motion.div
                   className="absolute inset-0 flex items-center justify-center bg-background/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -223,9 +223,9 @@ export function MusicSection() {
           >
             <h3 className="text-xl font-semibold text-foreground mb-6 flex items-center gap-2">
               <Music2 className="w-5 h-5 text-primary" />
-              Tracks Populares
+              Sets
             </h3>
-            
+
             <div className="space-y-3">
               {tracks.map((track, i) => (
                 <motion.div
@@ -235,11 +235,10 @@ export function MusicSection() {
                   transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
                   onMouseEnter={() => setHoveredTrack(track.id)}
                   onMouseLeave={() => setHoveredTrack(null)}
-                  className={`group flex items-center gap-4 p-4 rounded-xl transition-all cursor-pointer ${
-                    playingTrack === track.id
+                  className={`group flex items-center gap-4 p-4 rounded-xl transition-all cursor-pointer ${playingTrack === track.id
                       ? "bg-gradient-to-r from-primary/20 to-secondary/10 border border-primary/30"
                       : "bg-card/50 backdrop-blur border border-transparent hover:border-border hover:bg-card"
-                  }`}
+                    }`}
                 >
                   {/* Track Number / Play Button */}
                   <div className="w-12 h-12 flex items-center justify-center">
